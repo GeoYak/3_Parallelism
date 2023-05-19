@@ -49,6 +49,7 @@ if __name__ == '__main__':
 
     p = Pool(5)
     if check_matrix(matrix1, matrix2):
+        open('prom.txt', 'w').close()
         args = generate_map(matrix1, matrix2)
         result = np.array(p.map(element, args))
         matrix = result.reshape(matrix1.shape[0], matrix2.shape[1])
